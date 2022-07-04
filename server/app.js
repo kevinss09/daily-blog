@@ -1,11 +1,30 @@
 //jshint esversion:6
 
 const express = require("express");
-const app = express();
+const bodyParser = require("body-parser");
+const routesHandler = require("./routes/handler.js");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-app.get("/api", (req, res) => {
-	res.json({ users: ["userOne", "userTwo", "userThree"] });
-});
+dotenv.config();
+
+const app = express();
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+app.use("/", routesHandler);
+
+// Create a DB connection
+mongoose
+	.connect(process.env.DB_URI, {
+		useUnifiedTopology: true,
+		useNewUrlParser: true,
+	})
+	.then(() => {
+		console.log("DB connected");
+	})
+	.catch((err) => {
+		console.log(err);
+	});
 
 app.listen(5000, () => {
 	console.log("Server has connected to port 5000");

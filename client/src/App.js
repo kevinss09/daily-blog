@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
+import Post from "./pages/Post";
 import { useState } from "react";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
 					<Route exact path="/" element={<Home />} />
 					<Route path="/Contact" element={<Contact />} />
 					<Route path="/About" element={<About />} />
+					<Route path="/Post" element={<Post />} />
 				</Routes>
 			</BrowserRouter>
 		</div>

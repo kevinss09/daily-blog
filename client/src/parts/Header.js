@@ -60,7 +60,7 @@ export default function Header({ setToggle, toggle }) {
 				</li>
 
 				<button className="bg-teal-500 hover:bg-teal-600 px-6 py-1 text-black duration-500 mx-4 font-heading rounded-sm text-xl mb-4 md:mb-0 hover:text-white">
-					New Post
+					<Link to="/Post">New Post</Link>
 				</button>
 			</ul>
 		</nav>

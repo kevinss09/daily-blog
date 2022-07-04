@@ -1,0 +1,24 @@
+				<div className="container mx-20 p-4">
+					<form method="POST" action="/addBlog">
+						<div className="mb-4">
+							<label
+								for="username"
+								className="inline-block text-sm font-bold w-full"
+							>
+								Username:
+							</label>
+							<input
+								type="text"
+								id="username"
+								className="w-full cursor-text h-9 py-"
+							/>
+						</div>
+						<div>
+							<label for="topic">Topic: </label>
+							<input type="text" id="topic" />
+						</div>
+						<div>
+							<label for="explanation">Explanation: </label>
+							<input type="textarea" id="explanation" />
+						</div>
+						<input type="submit" value="Send" />
