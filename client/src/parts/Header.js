@@ -12,7 +12,7 @@ export default function Header({ setToggle, toggle }) {
 							className="inline h-8 mr-5"
 							alt="People emoji"
 						/>
-						What did I do Today?
+						What did I learn Today?
 					</span>
 				</Link>
 

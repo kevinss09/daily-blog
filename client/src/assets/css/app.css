@@ -10,6 +10,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	min-height: 100vh;
+}
+
 #about-page ul {
 	list-style-type: circle;
 }

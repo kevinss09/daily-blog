@@ -5,6 +5,7 @@ import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Post from "./pages/Post";
 import { useState } from "react";
+import Detail from "./pages/Detail";
 
 function App() {
 	return (
@@ -15,6 +16,7 @@ function App() {
 					<Route path="/Contact" element={<Contact />} />
 					<Route path="/About" element={<About />} />
 					<Route path="/Post" element={<Post />} />
+					<Route exact path="/posts/:idc" element={<Detail />} />
 				</Routes>
 			</BrowserRouter>
 		</div>
