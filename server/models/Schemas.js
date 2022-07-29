@@ -19,6 +19,15 @@ const blogsSchema = new mongoose.Schema({
 	},
 });
 
-const Blog = new mongoose.model("Blog", blogsSchema);
+const listsSchema = new mongoose.Schema({
+	listName: {
+		type: String,
+		require: true,
+	},
+	blogs: [blogsSchema],
+});
 
-module.exports = Blog;
+const Blog = new mongoose.model("Blog", blogsSchema);
+const List = new mongoose.model("List", listsSchema);
+
+module.exports = { Blog, List };

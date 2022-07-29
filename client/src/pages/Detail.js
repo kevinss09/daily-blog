@@ -21,16 +21,6 @@ export default function Detail() {
 		setItems(items);
 	};
 
-	// function handleClick1() {
-	// 	setAddNote((prev) => !prev);
-	// 	setWhichNote("addNote");
-	// }
-
-	// function handleClick2() {
-	// 	setAddNote((prev) => !prev);
-	// 	setWhichNote("deleteNote");
-	// }
-
 	return (
 		<>
 			<Header setToggle={setToggle} toggle={toggle} />

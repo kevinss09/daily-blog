@@ -26,6 +26,6 @@ mongoose
 		console.log(err);
 	});
 
-app.listen(5000, () => {
-	console.log("Server has connected to port 5000");
+app.listen(3001, () => {
+	console.log("Server has connected to port 3001");
 });
